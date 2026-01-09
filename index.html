@@ -2,42 +2,38 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Gestion Pèlerinage - Diocèse</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription Pèlerinage</title>
 
-  <!-- CDN -->
+  <!-- Tailwind CDN (OK pour test / démo) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
 
-  <!-- NAV -->
-  <nav id="navbar"></nav>
+  <main class="bg-white p-8 rounded-xl shadow-lg w-full max-w-xl">
+    <h1 class="text-2xl font-bold mb-6 text-center">Inscription Pèlerin</h1>
 
-  <!-- APP -->
-  <main id="app" class="container mx-auto px-4 py-8 min-h-screen"></main>
+    <form id="inscription-form" class="space-y-4">
 
-  <!-- FOOTER -->
-  <footer class="bg-green-900 text-green-100 py-6 text-center">
-    © 2024 Comité d'Organisation du Pèlerinage
-  </footer>
+      <input name="nom" placeholder="Nom" required class="w-full p-3 border rounded" />
+      <input name="prenom" placeholder="Prénom" required class="w-full p-3 border rounded" />
+      <input name="email" type="email" placeholder="Email" required class="w-full p-3 border rounded" />
+      <input name="numero" placeholder="Téléphone" required class="w-full p-3 border rounded" />
+      <input name="date_naissance" type="date" required class="w-full p-3 border rounded" />
+      <input name="diocese" placeholder="Diocèse" required class="w-full p-3 border rounded" />
+      <input name="paroisse" placeholder="Paroisse (optionnel)" class="w-full p-3 border rounded" />
 
-  <!-- JS -->
-  <script src="js/state.js"></script>
-  <script src="js/navigation.js"></script>
+      <button
+        type="submit"
+        class="w-full bg-indigo-600 text-white py-3 rounded font-bold hover:bg-indigo-700"
+      >
+        Envoyer l’inscription
+      </button>
 
-  <script src="js/views/auth.js"></script>
-  <script src="js/views/registration.js"></script>
-  <script src="js/views/payment.js"></script>
-  <script src="js/views/receipt.js"></script>
-  <script src="js/views/userDashboard.js"></script>
-  <script src="js/views/adminDashboard.js"></script>
+    </form>
+  </main>
 
-  <script src="js/services/paymentService.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
